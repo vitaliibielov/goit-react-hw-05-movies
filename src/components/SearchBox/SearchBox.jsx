@@ -1,3 +1,4 @@
+import css from './SearchBox.module.css';
 
 export const SearchBox = ({ onSubmit }) => {
     const submitForm = evt => {
@@ -7,13 +8,13 @@ export const SearchBox = ({ onSubmit }) => {
     };
   
     return (
-      <form onSubmit={submitForm}>
-        <input
+      <form onSubmit={submitForm} className={css.form}>
+        <input className={css.input}
           name="query"
           type="text"
           placeholder="Search films"
         />
-        <button  type="submit">
+        <button className={css.btn} type="submit">
             Search
         </button>
       </form>

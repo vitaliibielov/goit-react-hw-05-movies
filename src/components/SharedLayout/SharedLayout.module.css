@@ -1,0 +1,33 @@
+.nav {
+    display: flex;
+    padding: 20px 60px;
+    /* margin-left: 40px; */
+    gap: 15px;
+    background-color: gainsboro;
+}
+
+
+.link {
+    display: block;
+    padding: 15px;
+    width: 50px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+.link:hover {
+    color: red;
+    border: solid 1px red;
+}
+
+.link:focus {
+    color: red;
+    border: solid 1px red;
+}
+
