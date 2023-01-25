@@ -5,7 +5,7 @@ import { getMovieCredits } from "service/Api";
 
 import css from './Cast.module.css';
 
-export const Cast = () => {
+export default function Cast() {
     const { movieId } = useParams();
 
   const [movieCast, setMovieCast] = useState(null);

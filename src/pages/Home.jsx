@@ -2,7 +2,7 @@ import {getTrendingMovies} from 'service/Api';
 import { useEffect, useState } from 'react';
 import { MovieList } from 'components/MovieList/MovieList';
 
-export const Home = () => {
+const Home = () => {
     const [movies, setMovies] = useState(null);
     useEffect(()=>{
         getTrendingMovies().then(({results})=>{setMovies(results)})
@@ -13,3 +13,5 @@ export const Home = () => {
         <MovieList movies={movies}/>
     ) 
 }
+
+export default Home

@@ -6,10 +6,12 @@ import css from './MovieDetails.module.css';
 
 
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
     const location = useLocation();
     const [movie, setMovie] = useState(null);
     const {movieId} = useParams();
+    const [isLoading, setIsLoading] = useState(false);
+
     useEffect(()=>{
         getMovieById(movieId).then(data => setMovie(data))
     },[movieId])
@@ -46,12 +48,12 @@ export const MovieDetails = () => {
                         <h3 >Additional information</h3>
                         <ul className={css.list}>
                             <li >
-                                <Link to="cast" state={{ from: location }} className={css.btn}>
+                                <Link to="cast" state={{ from: backLinkHref }} className={css.btn}>
                                 Cast
                                 </Link>
                             </li>
                             <li >
-                                <Link to="reviews" state={{ from: location }} className={css.btn}>
+                                <Link to="reviews" state={{ from: backLinkHref }} className={css.btn}>
                                 Reviews
                                 </Link>
                             </li>
@@ -63,3 +65,5 @@ export const MovieDetails = () => {
         </>
     ) 
 }
+
+export default MovieDetails;
