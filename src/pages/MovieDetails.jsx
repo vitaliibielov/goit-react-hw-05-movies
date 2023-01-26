@@ -10,7 +10,7 @@ const MovieDetails = () => {
     const location = useLocation();
     const [movie, setMovie] = useState(null);
     const {movieId} = useParams();
-    const [isLoading, setIsLoading] = useState(false);
+    // const [isLoading, setIsLoading] = useState(false);
 
     useEffect(()=>{
         getMovieById(movieId).then(data => setMovie(data))
